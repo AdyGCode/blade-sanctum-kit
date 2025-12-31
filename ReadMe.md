@@ -6,6 +6,8 @@ A Laravel Blade Template with Sanctum Authentication built in.
 
 *Based on the Blade & Breeze Starter Kit provided with Laravel versions before Laravel 12.*
 
+Primarily used for teaching purposes at [North Metropolitan TAFE](https://northmetrotafe.wa.edu.au).
+
 ### Built With
 
 [![PHP][Php.com]][Php-url]
@@ -17,6 +19,12 @@ A Laravel Blade Template with Sanctum Authentication built in.
 
 [![PhpStorm][PhpStorm.com]][PhpStorm-url]
 [![JetBrains][JetBrains.com]][JetBrains-url]
+
+## Repo Stats
+
+[![Forks][-Forks-Shield]][-Forks-URL]
+[![Issues][-Issues-Shield]][-Issues-URL]
+[![Educational Community Licence][-Licence-Shield]][-Licence-URL]
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -39,19 +47,19 @@ vendor such as a payment system.
 
 #### General Welcome/Home Page
 
-[![Product Screenshot Welcome Page][-Product-ScreenShot-1]]
+![Product Screenshot Welcome Page][-Product-ScreenShot-1]
 
 #### Authenticated User Dashboard
 
-[![Product Screenshot Authenticated User Dashboard][-Product-ScreenShot-2]]
+![Product Screenshot Authenticated User Dashboard][-Product-ScreenShot-2]
 
 #### Admin Dashboard
 
-[![Product Screenshot Admin Dashboard][-Product-ScreenShot-3]]
+![Product Screenshot Admin Dashboard][-Product-ScreenShot-3]
 
 #### About Page
 
-[![Product Screenshot About Page][-Product-ScreenShot-4]]
+![Product Screenshot About Page][-Product-ScreenShot-4]
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -107,14 +115,6 @@ This template is built using:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Badges
-
-[![Forks][-Forks-Shield]][-Forks-URL]
-[![Issues][-Issues-Shield]][-Issues-URL]
-[![Educational Community Licence][-Licence-Shield]][-Licence-URL]
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Tests
 
@@ -199,7 +199,7 @@ composer require spatie/laravel-permission
 
 ## Contact
 
-Adrian Gould: Lecturer (ASL1), [North Metropolitan TAFE](https://northmetrotafe.wa.edu.au), Perth WA
+Adrian Gould: Lecturer (ASL1), [North Metropolitan TAFE](https://northmetrotafe.wa.edu.au), Perth WA, Australia.
 
 - GitHub Pages: [https://adygcode.github.io](https://adygcode.github.io)
 - GitHub Repos: [https://github.com/AdyGCode](https://github.com/AdyGCode)
@@ -219,81 +219,48 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 ---
 
 <!-- General Items, Screenshots, et al -->
+<!-- Screenshots stored in storage/app/public/kit-docs -->
 
 [-Forks-Shield]: http://img.shields.io/github/forks/adygcode/base-blade-kit.svg?style=for-the-badge
-
 [-Forks-URL]: https://github.com/AdyGCode/base-blade-kit/network/members
-
 [-Issues-Shield]: http://img.shields.io/github/issues/adygcode/base-blade-kit.svg?style=for-the-badge
-
 [-Issues-URL]: https://github.com/adygcode/base-blade-kit/issues
-
 [-Licence-Shield]: https://img.shields.io/github/license/adygcode/base-blade-kit.svg?style=for-the-badge
-
 [-Licence-URL]: https://github.com/adygcode/base-blade-kit/blob/main/License.md
-
-[-Product-Screenshot-1]: storage/app/public/readme/screenshot-welcome.png
-
-[-Product-Screenshot-2]: storage/app/public/readme/screenshot-authenticated.png
-
-[-Product-Screenshot-3]: storage/app/public/readme/screenshot-admin.png
-
-[-Product-Screenshot-4]: storage/app/public/readme/screenshot-about.png
+[-Product-Screenshot-1]: storage/app/public/kit-docs/screenshot-welcome.png
+[-Product-Screenshot-2]: storage/app/public/kit-docs/screenshot-authenticated.png
+[-Product-Screenshot-3]: storage/app/public/kit-docs/screenshot-admin.png
+[-Product-Screenshot-4]: storage/app/public/kit-docs/screenshot-about.png
 
 <!-- Product, Package, Framework, et al -->
 
 [DebugBar-url]: https://laraveldebugbar.com
-
 [DebugBar.com]: https://img.shields.io/badge/Laravel_Debugbar-eb4432?logoColor=white
-
 [Inertia-url]: https://inertiajs.com
-
 [Inertia.com]: https://img.shields.io/badge/Inertia-9553E9?&logo=inertia&logoColor=white
-
 [JetBrains-url]: https://jetbrains.com
-
 [JetBrains.com]: https://img.shields.io/badge/JetBrains-000000?style=for-the-badge&logo=jetbrains&logoColor=white
-
 [Laradumps-url]: https://laradumps.dev
-
 [Laradumps.com]: https://img.shields.io/badge/Laradumps-fbc120?logoColor=black
-
 [Larastan-url]:https://github.com/larastan/larastan
-
 [Larastan.com]: https://img.shields.io/badge/Larastan-3191d0?logoColor=white
-
 [Laravel-url]: https://laravel.com
-
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-
 [Livewire-url]: https://livewire.laravel.com
-
 [Livewire.com]: https://img.shields.io/badge/Livewire-4E56A6?logo=livewire&logoColor=white
-
 [Php-url]: https://inertiajs.com
-
 [Php.com]: https://img.shields.io/badge/Php-777BB4?style=for-the-badge&logo=php&logoColor=white
-
 [PhpStorm-url]: https://www.jetbrains.com/phpstorm/
-
 [PhpStorm.com]: https://img.shields.io/badge/phpstorm-000000?style=for-the-badge&logo=phpstorm&logoColor=white
-
 [Pint-url]: https://laravel.com/docs/pint
-
 [Pint.com]: https://img.shields.io/badge/Pint-f49931?logo=laravel&logoColor=black
-
+[Sanctum-url]: https://laravel.com
+[Sanctum.com]: https://img.shields.io/badge/Sanctum-4b92d6?style=for-the-badge&logo=laravel&logoColor=white
 [SimpleIcons-url]: https://simpleicons.org
-
 [SimpleIcons.com]: https://img.shields.io/badge/SimpleIcons-111111?logo=simpleicons&logoColor=white
-
 [SpatiePermission-url]: https://spatie.be/docs/laravel-permission/v6/introduction
-
 [SpatiePermission.com]: https://img.shields.io/badge/Spatie_Permission-197593?logoColor=white
-
 [Tailwindcss-url]: https://tailwindcss.com
-
 [Tailwindcss.com]: https://img.shields.io/badge/Tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
-
 [Telescope-url]: https://telescope.laravel.com
-
 [Telescope.com]: https://img.shields.io/badge/Telescope-7760cb?logo=laravel&logoColor=white

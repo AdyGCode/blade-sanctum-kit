@@ -17,9 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        $this->call(
+            [
+                // When using Spatie Permissions, perform the Role / Permission seeding FIRST
+                UserSeeder::class,
+                // Add further seeder classes here
+            ]
+        );
+
     }
 }
