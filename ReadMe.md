@@ -36,28 +36,33 @@ Free icons.
 
 It contains three sections:
 
-- Static Layout, Controller and Pages
-- Authenticated User Layout and Pages
-- Administration Layout, Controller and Pages
+- **Web**: 
+  - Static Layout, Controller and Pages
+- **Client**: 
+  - Authenticated User Layout and Pages
+- **Admin**: 
+  - Administration Layout, Controller and Pages
 
-The project was developed as a re-write of the "Retro Blade Kit" also by Adrian Gould.
+The project is developed as a re-write of the "Retro Blade Kit" and "Base Blade Kit" also by Adrian Gould.
 
 It provides a base template for the creation of a "SaaS" style application, omitting sections that may tie to a specific
 vendor such as a payment system.
 
-#### General Welcome/Home Page
+Below are sample pages from the kit.
+
+### General Welcome/Home Page
 
 ![Product Screenshot Welcome Page][-Product-ScreenShot-1]
 
-#### Authenticated User Dashboard
+### Authenticated User Dashboard
 
 ![Product Screenshot Authenticated User Dashboard][-Product-ScreenShot-2]
 
-#### Admin Dashboard
+### Admin Dashboard
 
 ![Product Screenshot Admin Dashboard][-Product-ScreenShot-3]
 
-#### About Page
+### About Page
 
 ![Product Screenshot About Page][-Product-ScreenShot-4]
 
@@ -112,9 +117,16 @@ This template is built using:
 - Free Open Source Tailwind CSS v4 Components | HyperUI. (2025). HyperUI. https://www.hyperui.dev/
 - Shields.io. (2025). Shields.io. https://shields.io/
 - Simple Icons. (2025). Simpleicons.org. https://simpleicons.org/?q=simple
+- Roave/SecurityAdvisories: Security advisories as a simple composer exclusion list, updated daily. (2025). GitHub. https://github.com/Roave/SecurityAdvisories
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Installation commands
+
+```shell
+composer require --dev roave/security-advisories:dev-latest
+composer require laravel/breeze 
+```
 
 ## Tests
 
