@@ -66,10 +66,6 @@ vendor such as a payment system.
 
 One-click install a new application using this starter kit through [Laravel Herd](https://herd.laravel.com):
 
-[Laravel Herd ](https://herd.laravel.com)
-
-<a href="https://herd.laravel.com/new?starter-kit=adygcode/blade-sanctum-kit"><img src="https://img.shields.io/badge/Install%20with%20Herd-fff?logo=laravel&logoColor=f53003" alt="Install with Herd"></a>
-
 [![Install_with_Laravel_Herd][LaravelHerdCreate.com]][LaravelHerdCreate-url]
 
 ### Via the Laravel Installer
