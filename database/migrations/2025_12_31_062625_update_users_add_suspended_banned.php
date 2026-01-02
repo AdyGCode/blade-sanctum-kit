@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->timestamp('suspended_at')->nullable();
+            $table->timestamp('suspended_at')->nullable()->default(null);
+            $table->timestamp('banned_at')->nullable()->default(null);
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('suspended_at');
+            $table->dropColumn('banned_at');
         });
     }
 };

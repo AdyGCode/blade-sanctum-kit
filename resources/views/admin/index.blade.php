@@ -47,7 +47,7 @@
 
             <x-stats-card title="{{ __('Books') }}"
                           value="{{ $book_count }}"
-                          bg="bg-indigo-700"
+                          bg="bg-sky-700"
                           icon="fa-solid fa-book"
                           icon-color="text-white"/>
 
@@ -68,7 +68,7 @@
             <x-stats-card title="{{ __('Unique Visitors') }}"
                           value="{{ $visitor_count }}"
                           bg="bg-zinc-700"
-                          icon="fa-solid fa-chart-line"
+                          icon="fa-solid fa-arrow-trend-up"
                           icon-color="text-white"/>
 
         </div>
@@ -84,7 +84,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 ">
 
-            <a href="{{ route('admin.users') }}">
+            <a href="{{ route('admin.users.index') }}">
                 <x-stats-card icon="fa-solid fa-person"
                               title="{{ __('Users') }}"
                               value="{{ $user_count }}"
@@ -92,13 +92,13 @@
                               icon-color="text-white"/>
             </a>
 
-            <x-stats-card icon="fa-solid fa-person"
-                          title="{{ __('Logged In') }}"
+            <x-stats-card icon="fa-solid fa-person-walking"
+                          title="{{ __('Signed In') }}"
                           value="{{ $user_logged_in_count }}"
                           bg="bg-green-700"
                           icon-color="text-white"/>
 
-            <x-stats-card icon="fa-solid fa-person"
+            <x-stats-card icon="fa-solid fa-person-military-pointing"
                           title="{{ __('Roles') }}"
                           value="{{ $role_count }}"
                           bg="bg-violet-700"
@@ -182,49 +182,49 @@
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Rose"
                           bg="bg-rose-700"
-                          icon="fa-solid fa-laugh-squint"
+                          icon="fa-solid fa-shrimp"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Pink"
                           bg="bg-pink-700"
-                          icon="fa-solid fa-boxes-stacked"
+                          icon="fa-solid fa-apple-whole"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Fuchsia"
                           bg="bg-fuchsia-700"
-                          icon="fa-solid fa-cat"
+                          icon="fa-solid fa-brain"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Purple"
                           bg="bg-purple-700"
-                          icon="fa-solid fa-passport"
+                          icon="fa-solid fa-cloud-sun-rain"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Violet"
                           bg="bg-violet-700"
-                          icon="fa-solid fa-list-check"
+                          icon="fa-solid fa-clock"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
-                          value="Indigo"
-                          bg="bg-indigo-700"
-                          icon="fa-solid fa-book"
+                          value="sky"
+                          bg="bg-sky-700"
+                          icon="fa-solid fa-shop"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Blue"
                           bg="bg-blue-700"
-                          icon="fa-solid fa-car"
+                          icon="fa-solid fa-virus"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Sky"
                           bg="bg-sky-700"
-                          icon="fa-solid fa-chart-line"
+                          icon="fa-solid fa-piggy-bank"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
@@ -242,7 +242,7 @@
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Emerald"
                           bg="bg-emerald-700"
-                          icon="fa-solid fa-hand"
+                          icon="fa-solid fa-chess"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
@@ -254,7 +254,7 @@
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Lime"
                           bg="bg-lime-700"
-                          icon="fa-solid fa-hand-fist"
+                          icon="fa-solid fa-compass"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
@@ -266,7 +266,7 @@
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Amber"
                           bg="bg-amber-700"
-                          icon="fa-solid fa-hand-lizard"
+                          icon="fa-solid fa-dice-d6"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
@@ -288,27 +288,27 @@
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
-                          value="Gray"
-                          bg="bg-gray-700"
+                          value="zinc"
+                          bg="bg-zinc-700"
                           icon="fa-solid fa-hand-spock"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Zinc"
                           bg="bg-zinc-700"
-                          icon="fa-solid fa-compass"
+                          icon="fa-solid fa-hand-fist"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Neutral"
                           bg="bg-neutral-700"
-                          icon="fa-solid fa-chess"
+                          icon="fa-solid fa-hand"
                           icon-color="text-white"/>
 
             <x-stats-card title="{{ __('Tailwind Colour') }}"
                           value="Stone"
                           bg="bg-stone-700"
-                          icon="fa-solid fa-dice-d6"
+                          icon="fa-solid fa-hand-lizard"
                           icon-color="text-white"/>
 
 
@@ -328,27 +328,79 @@
 
             <x-stats-card icon="fa-solid fa-swatchbook"
                           title="Custom Colour"
-                          value="MariaDB"
-                          value-class="text-xl text-zinc-900"
+                          value="MariaDB Fir Green"
+                          value-class="text-xl"
                           bg="bg-mariadb-900"
                           icon-color="text-white"/>
 
             <x-stats-card icon="fa-solid fa-swatchbook"
                           title="Custom Colour"
-                          value="Node.JS"
+                          value="Node.JS Olive Green"
+                          value-class="text-xl"
                           bg="bg-nodejs-500"
                           icon-color="text-white"/>
 
             <x-stats-card icon="fa-solid fa-swatchbook"
                           title="Custom Colour"
                           value="Laravel Red"
+                          value-class="text-xl"
                           bg="bg-laravel-500"
                           icon-color="text-white"/>
 
             <x-stats-card icon="fa-solid fa-swatchbook"
                           title="Custom Colour"
-                          value="PHP Purple"
+                          value="PHP Lilac"
+                          value-class="text-xl"
                           bg="bg-php-500"
+                          icon-color="text-white"/>
+
+            <x-stats-card icon="fa-solid fa-swatchbook"
+                          title="Custom Colour"
+                          value="Signal Purple"
+                          value-class="text-xl"
+                          bg="bg-signal-500"
+                          icon-color="text-white"/>
+
+            <x-stats-card icon="fa-solid fa-swatchbook"
+                          title="Custom Colour"
+                          value="WhatsApp Purple"
+                          value-class="text-xl"
+                          bg="bg-whatsapp-500"
+                          icon-color="text-white"/>
+
+            <x-stats-card icon="fa-solid fa-swatchbook"
+                          title="Custom Colour"
+                          value="Telegram Sky Blue"
+                          value-class="text-xl"
+                          bg="bg-telegram-500"
+                          icon-color="text-white"/>
+
+            <x-stats-card icon="fa-solid fa-swatchbook"
+                          title="Custom Colour"
+                          value="Discord Blue"
+                          value-class="text-xl"
+                          bg="bg-telegram-500"
+                          icon-color="text-white"/>
+
+            <x-stats-card icon="fa-solid fa-swatchbook"
+                          title="Custom Colour"
+                          value="Facebook Blue Pale"
+                          value-class="text-xl"
+                          bg="bg-telegram-500"
+                          icon-color="text-white"/>
+
+            <x-stats-card icon="fa-solid fa-swatchbook"
+                          title="Custom Colour"
+                          value="LinkedIn Dusky Blue"
+                          value-class="text-xl"
+                          bg="bg-linkedin-500"
+                          icon-color="text-white"/>
+
+            <x-stats-card icon="fa-solid fa-swatchbook"
+                          title="Custom Colour"
+                          value="GitHub Grey"
+                          value-class="text-xl"
+                          bg="bg-github-500"
                           icon-color="text-white"/>
 
         </div>

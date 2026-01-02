@@ -1,15 +1,13 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\UserManagementController;
 use App\Http\Controllers\Client\DashboardController;
 use App\Http\Controllers\Client\ProfileController;
 use App\Http\Controllers\Web\StaticPageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [StaticPageController::class, 'home'])
-    ->name('home');
-Route::get('/about', [StaticPageController::class, 'about'])
-    ->name('about');
+require __DIR__.'/static.php';
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])
@@ -23,7 +21,7 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', [AdminController::class, 'index'])
             ->name('index');
 
-        Route::get('users', [AdminController::class, 'users'])->name('users');
+        Route::resource('users', UserManagementController::class);
     });
 
 Route::middleware('auth')->group(function () {

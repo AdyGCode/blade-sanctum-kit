@@ -7,7 +7,7 @@
                    bg-zinc-600
                    hover:bg-zinc-300
                    border-0 border-l-4 border-zinc-400
-                   focus:border-indigo-700
+                   focus:border-sky-700
                    focus:outline-none
                    transition duration-250 ease-in-out'
                 : 'block px-4 py-2 text-sm font-medium

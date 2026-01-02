@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="py-8 grid grid-cols-1 space-y-4 max-w-7xl mx-auto">
-        <div class="w-full sm:px-6 lg:px-8 grid grid-cols-3 gap-4">
+        <div class="w-full sm:px-6 lg:px-8 hidden md:visible md:grid lg:grid-cols-3 gap-4">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 
                 <article class="m-4">

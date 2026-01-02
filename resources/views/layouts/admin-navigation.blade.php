@@ -50,7 +50,7 @@
 
                 <section class="mt-2 space-y-1">
 
-                    <x-side-nav-link :href="route('home')" :active="request()->routeIs('home')" class="px-10 py-2">
+                    <x-side-nav-link :href="route('admin.users.index')" :active="request()->routeIs('admin.users.*')" class="px-10 py-2">
                         {{ __('Accounts') }}
                     </x-side-nav-link>
 
@@ -63,7 +63,7 @@
                     </x-side-nav-link>
 
                     <x-side-nav-link :href="route('home')" :active="request()->routeIs('home')" class="px-10 py-2">
-                        {{ __('Banned Users') }}
+                        {{ __('Banned') }}
                     </x-side-nav-link>
 
                 </section>
@@ -150,7 +150,7 @@
                                                 this.closest('form').submit();">
                 <i class="fa-solid fa-sign-out group-hover:text-zinc-500"></i>
 
-                {{ __('Log Out') }}
+                {{ __('Sign Out') }}
             </a>
         </form>
 
