@@ -66,7 +66,7 @@ vendor such as a payment system.
 
 One-click install a new application using this starter kit through [Laravel Herd](https://herd.laravel.com):
 
-[![Install_with_Laravel_Herd][LaravelHerdCreate.com]][LaravelHerdCreate-url]
+![Install_with_Laravel_Herd][LaravelHerdCreate.com]][LaravelHerdCreate-url]
 
 ### Via the Laravel Installer
 
@@ -101,6 +101,10 @@ Below are sample pages from the kit.
 ### About Page
 
 ![Product Screenshot About Page][-Product-ScreenShot-4]
+
+### Privacy Policy Page
+
+![Product Screenshot Privacy Policy Page][-Product-ScreenShot-5]
 
 ## Credits
 
@@ -299,6 +303,8 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 [-Product-Screenshot-3]: public/kit-docs/screenshot-admin.png
 
 [-Product-Screenshot-4]: public/kit-docs/screenshot-about.png
+
+[-Product-Screenshot-5]: public/kit-docs/screenshot-privacy.png
 
 <!-- Product, Package, Framework, et al -->
 
