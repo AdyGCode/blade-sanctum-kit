@@ -5,18 +5,19 @@
     "description": "A Laravel Blade Template with Sanctum Authentication built in",
     "keywords": [
         "laravel",
-        "framework"
+        "framework",
+        "starter kit"
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.4",
+        "php": "^8.3",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/breeze": "^2.3",
-        "laravel/pint": "^1.24",
+        "laravel/pint": "1.24",
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",

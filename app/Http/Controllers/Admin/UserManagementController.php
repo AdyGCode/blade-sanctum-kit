@@ -11,8 +11,6 @@ class UserManagementController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return View
      */
     public function index(): View
     {
@@ -21,7 +19,6 @@ class UserManagementController extends Controller
         return view('admin.users.index')
             ->with('users', $users);
     }
-
 
     /**
      * Show the form for creating a new resource.

@@ -36,36 +36,17 @@ Free icons.
 
 It contains three sections:
 
-- **Web**: 
-  - Static Layout, Controller and Pages
-- **Client**: 
-  - Authenticated User Layout and Pages
-- **Admin**: 
-  - Administration Layout, Controller and Pages
+- **Web**:
+    - Static Layout, Controller and Pages
+- **Client**:
+    - Authenticated User Layout and Pages
+- **Admin**:
+    - Administration Layout, Controller and Pages
 
 The project is developed as a re-write of the "Retro Blade Kit" and "Base Blade Kit" also by Adrian Gould.
 
 It provides a base template for the creation of a "SaaS" style application, omitting sections that may tie to a specific
 vendor such as a payment system.
-
-Below are sample pages from the kit.
-
-### General Welcome/Home Page
-
-![Product Screenshot Welcome Page][-Product-ScreenShot-1]
-
-### Authenticated User Dashboard
-
-![Product Screenshot Authenticated User Dashboard][-Product-ScreenShot-2]
-
-### Admin Dashboard
-
-![Product Screenshot Admin Dashboard][-Product-ScreenShot-3]
-
-### About Page
-
-![Product Screenshot About Page][-Product-ScreenShot-4]
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -85,7 +66,11 @@ Below are sample pages from the kit.
 
 One-click install a new application using this starter kit through [Laravel Herd](https://herd.laravel.com):
 
-<a href="https://herd.laravel.com/new?starter-kit=adygcode/blade-sanmctum-kit"><img src="https://img.shields.io/badge/Install%20with%20Herd-fff?logo=laravel&logoColor=f53003" alt="Install with Herd"></a>
+[Laravel Herd ](https://herd.laravel.com)
+
+<a href="https://herd.laravel.com/new?starter-kit=adygcode/blade-sanctum-kit"><img src="https://img.shields.io/badge/Install%20with%20Herd-fff?logo=laravel&logoColor=f53003" alt="Install with Herd"></a>
+
+[![Install_with_Laravel_Herd][LaravelHerdCreate.com]][LaravelHerdCreate-url]
 
 ### Via the Laravel Installer
 
@@ -100,6 +85,26 @@ Replace `my-app` with the name of your project, using kebab-case.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Screenshots
+
+Below are sample pages from the kit.
+
+### General Welcome/Home Page
+
+![Product Screenshot Welcome Page][-Product-ScreenShot-1]
+
+### Authenticated User Dashboard
+
+![Product Screenshot Authenticated User Dashboard][-Product-ScreenShot-2]
+
+### Admin Dashboard
+
+![Product Screenshot Admin Dashboard][-Product-ScreenShot-3]
+
+### About Page
+
+![Product Screenshot About Page][-Product-ScreenShot-4]
 
 ## Credits
 
@@ -117,16 +122,10 @@ This template is built using:
 - Free Open Source Tailwind CSS v4 Components | HyperUI. (2025). HyperUI. https://www.hyperui.dev/
 - Shields.io. (2025). Shields.io. https://shields.io/
 - Simple Icons. (2025). Simpleicons.org. https://simpleicons.org/?q=simple
-- Roave/SecurityAdvisories: Security advisories as a simple composer exclusion list, updated daily. (2025). GitHub. https://github.com/Roave/SecurityAdvisories
+- Roave/SecurityAdvisories: Security advisories as a simple composer exclusion list, updated daily. (2025).
+  GitHub. https://github.com/Roave/SecurityAdvisories
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-### Installation commands
-
-```shell
-composer require --dev roave/security-advisories:dev-latest
-composer require laravel/breeze 
-```
 
 ## Tests
 
@@ -139,19 +138,71 @@ TBD
 
 If you wish to add packages for further functionality, then follow the usual documentation from each of their sites.
 
-| Dev | Prod | Item                                                               | Purpose                                        |
-|-----|------|--------------------------------------------------------------------|------------------------------------------------|
-| ✔   | ✔    | [![Livewire][Livewire.com]][Livewire-url]                          | Laravel based dynamic pages with minimal JS    |
-| ✔   | ✔    | [![Spatie Permission][SpatiePermission.com]][SpatiePermission-url] | Roles and Permissions                          |
-| ✔   | ✔    | [![Telescope][Telescope.com]][Telescope-url]                       | Application performance tracking and debugging |
-| ✔   |      | [![DebugBar][DebugBar.com]][DebugBar-url]                          | In browser debug bar                           |
-| ✔   |      | [![Laradumps][Laradumps.com]][Laradumps-url]                       | Debugging without dump and die                 |
-| ✔   |      | [![Larastan][Larastan.com]][Larastan-url]                          | Static analysis of code                        |
-| ✔   |      | [![Pint][Pint.com]][Pint-url]                                      | Opinionated code formatting                    |
+| Dev | Prod | Item                                                               | Purpose                                                                     |
+|-----|------|--------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| ✔   | ✔    | [![Livewire][Livewire.com]][Livewire-url]                          | Laravel based dynamic pages with minimal JS                                 |
+| ✔   | ✔    | [![Spatie Permission][SpatiePermission.com]][SpatiePermission-url] | Roles and Permissions                                                       |
+| ✔   | ✔    | [![Telescope][Telescope.com]][Telescope-url]                       | Application performance tracking and debugging. May be resource usage heavy |
+| ✔   | ✕    | [![DebugBar][DebugBar.com]][DebugBar-url]                          | In browser debug bar                                                        |
+| ✔   | ✕    | [![Laradumps][Laradumps.com]][Laradumps-url]                       | Debugging without dump and die                                              |
+| ✔   | ✕    | [![Larastan][Larastan.com]][Larastan-url]                          | Static analysis of code                                                     |
+| ✔   | ✕    | [![Pint][Pint.com]][Pint-url]                                      | Opinionated code formatting                                                 |
 
-### Quick Package Installs
+### Installation of Packages
 
-#### Static Analysis for Laravel
+After completing an installation with the starter kit, you may want to update or add extra packages.
+
+Updating is always a good idea before getting into the development process. And it should also be completed whilst
+development is progressing, but never on the main branch.
+
+Adding additional packages will occur, usually as the development process is completed, again never on the main branch.
+
+When updating or adding any package make sure you immediately run your tests to make sure nothing has got broken in the
+upgrade/addition process.
+
+### Updating Packages
+
+If you wish to make sure that the basics are complete, and upgrades are also completed then the following may assist...
+
+#### Dry Run Updates
+
+Before doing so, do a dry run to see what is updated:
+
+```shell
+composer update --dry-run
+npm update --dry-run
+```
+
+#### Composer Pacakge Updates
+
+Afterwards, you may update individually using commands such as those below:
+
+```shell
+composer update laravel/laravel
+composer update laravel/sanctum
+composer update --dev roave/security-advisories:dev-latest
+composer update --dev laravel/breeze
+composer update --dev laravel/pint
+composer update --dev pestphp/pest
+composer update --dev pestphp/pest-plugin-laravel
+```
+
+Or you may attempt a complete update using:
+
+```shell
+composer update
+```
+
+### Node.js Package Updates
+
+We have shown how to check for updates to the Node.js packages, and likewise you may update all the packages using a
+single command:
+
+```shell
+npm update
+```
+
+### Static Analysis for Laravel
 
 Use during development
 
@@ -159,7 +210,7 @@ Use during development
 composer require larastan/larastan --dev
 ```
 
-#### Pint Opinionated Code Formatting and Linter
+### Pint Opinionated Code Formatting and Linter
 
 Use during development
 
@@ -167,7 +218,7 @@ Use during development
 composer require laravel/pint --dev
 ```
 
-#### Laradumps
+### Laradumps
 
 Use during development only.
 
@@ -175,7 +226,7 @@ Use during development only.
 composer require laradumps/laradumps --dev
 ```
 
-#### Debug Bar
+### Debug Bar
 
 Use during development only.
 
@@ -183,7 +234,7 @@ Use during development only.
 composer require barryvdh/laravel-debugbar --dev
 ```
 
-#### Telescope
+### Telescope
 
 To use during development only:
 
@@ -197,13 +248,13 @@ If you wish to use this for development and production, remove the `--dev`:
 composer require laravel/telescope
 ```
 
-#### Livewire 4.0 BETA
+### Livewire 4.0 BETA
 
 ```shell
 composer require laravel/livewire
 ```
 
-#### Spatie Permission
+### Spatie Permission
 
 ```shell
 composer require spatie/laravel-permission
@@ -234,45 +285,91 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 <!-- Screenshots stored in storage/app/public/kit-docs -->
 
 [-Forks-Shield]: http://img.shields.io/github/forks/adygcode/base-blade-kit.svg?style=for-the-badge
+
 [-Forks-URL]: https://github.com/AdyGCode/base-blade-kit/network/members
+
 [-Issues-Shield]: http://img.shields.io/github/issues/adygcode/base-blade-kit.svg?style=for-the-badge
+
 [-Issues-URL]: https://github.com/adygcode/base-blade-kit/issues
+
 [-Licence-Shield]: https://img.shields.io/github/license/adygcode/base-blade-kit.svg?style=for-the-badge
+
 [-Licence-URL]: https://github.com/adygcode/base-blade-kit/blob/main/License.md
+
 [-Product-Screenshot-1]: storage/app/public/kit-docs/screenshot-welcome.png
+
 [-Product-Screenshot-2]: storage/app/public/kit-docs/screenshot-authenticated.png
+
 [-Product-Screenshot-3]: storage/app/public/kit-docs/screenshot-admin.png
+
 [-Product-Screenshot-4]: storage/app/public/kit-docs/screenshot-about.png
 
 <!-- Product, Package, Framework, et al -->
 
 [DebugBar-url]: https://laraveldebugbar.com
+
 [DebugBar.com]: https://img.shields.io/badge/Laravel_Debugbar-eb4432?logoColor=white
+
 [Inertia-url]: https://inertiajs.com
+
 [Inertia.com]: https://img.shields.io/badge/Inertia-9553E9?&logo=inertia&logoColor=white
+
 [JetBrains-url]: https://jetbrains.com
+
 [JetBrains.com]: https://img.shields.io/badge/JetBrains-000000?style=for-the-badge&logo=jetbrains&logoColor=white
+
 [Laradumps-url]: https://laradumps.dev
+
 [Laradumps.com]: https://img.shields.io/badge/Laradumps-fbc120?logoColor=black
+
 [Larastan-url]:https://github.com/larastan/larastan
+
 [Larastan.com]: https://img.shields.io/badge/Larastan-3191d0?logoColor=white
+
 [Laravel-url]: https://laravel.com
+
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+
+[LaravelHerd-url]: https://laravel.com
+
+[LaravelHerd.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+
+[LaravelHerdCreate-url]: https://herd.laravel.com/new?starter-kit=adygcode/blade-sanctum-kit
+
+[LaravelHerdCreate.com]: https://img.shields.io/badge/Install_with_Herd-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+
 [Livewire-url]: https://livewire.laravel.com
+
 [Livewire.com]: https://img.shields.io/badge/Livewire-4E56A6?logo=livewire&logoColor=white
+
 [Php-url]: https://inertiajs.com
+
 [Php.com]: https://img.shields.io/badge/Php-777BB4?style=for-the-badge&logo=php&logoColor=white
+
 [PhpStorm-url]: https://www.jetbrains.com/phpstorm/
+
 [PhpStorm.com]: https://img.shields.io/badge/phpstorm-000000?style=for-the-badge&logo=phpstorm&logoColor=white
+
 [Pint-url]: https://laravel.com/docs/pint
+
 [Pint.com]: https://img.shields.io/badge/Pint-f49931?logo=laravel&logoColor=black
+
 [Sanctum-url]: https://laravel.com
+
 [Sanctum.com]: https://img.shields.io/badge/Sanctum-4b92d6?style=for-the-badge&logo=laravel&logoColor=white
+
 [SimpleIcons-url]: https://simpleicons.org
+
 [SimpleIcons.com]: https://img.shields.io/badge/SimpleIcons-111111?logo=simpleicons&logoColor=white
+
 [SpatiePermission-url]: https://spatie.be/docs/laravel-permission/v6/introduction
+
 [SpatiePermission.com]: https://img.shields.io/badge/Spatie_Permission-197593?logoColor=white
+
 [Tailwindcss-url]: https://tailwindcss.com
+
 [Tailwindcss.com]: https://img.shields.io/badge/Tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
+
 [Telescope-url]: https://telescope.laravel.com
+
 [Telescope.com]: https://img.shields.io/badge/Telescope-7760cb?logo=laravel&logoColor=white

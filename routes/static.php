@@ -1,9 +1,5 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\UserManagementController;
-use App\Http\Controllers\Client\DashboardController;
-use App\Http\Controllers\Client\ProfileController;
 use App\Http\Controllers\Web\StaticPageController;
 use Illuminate\Support\Facades\Route;
 

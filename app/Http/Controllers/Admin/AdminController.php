@@ -12,8 +12,6 @@ class AdminController extends Controller
 {
     /**
      * Administration Status Page
-     *
-     * @return View
      */
     public function index(): View
     {
@@ -57,7 +55,6 @@ class AdminController extends Controller
             ->with('user_unverified_count', Number::format($userUnverifiedCount))
             ->with('user_banned_count', Number::format($userBannedCount))
             ->with('visitor_count', Number::format($visitorCount))
-            ->with('notice','');
+            ->with('notice', '');
     }
-
 }
