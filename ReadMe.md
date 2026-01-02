@@ -66,7 +66,7 @@ vendor such as a payment system.
 
 One-click install a new application using this starter kit through [Laravel Herd](https://herd.laravel.com):
 
-[![Install_with_Laravel_Herd][LaravelHerdCreate.com]][LaravelHerdCreate-url]
+![Install_with_Laravel_Herd][LaravelHerdCreate.com]][LaravelHerdCreate-url]
 
 ### Via the Laravel Installer
 
@@ -102,6 +102,10 @@ Below are sample pages from the kit.
 
 ![Product Screenshot About Page][-Product-ScreenShot-4]
 
+### Privacy Policy Page
+
+![Product Screenshot Privacy Policy Page][-Product-ScreenShot-5]
+
 ## Credits
 
 This template is built using:
@@ -136,13 +140,13 @@ If you wish to add packages for further functionality, then follow the usual doc
 
 | Dev | Prod | Item                                                               | Purpose                                                                     |
 |-----|------|--------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| ✔   | ✔    | [![Livewire][Livewire.com]][Livewire-url]                          | Laravel based dynamic pages with minimal JS                                 |
-| ✔   | ✔    | [![Spatie Permission][SpatiePermission.com]][SpatiePermission-url] | Roles and Permissions                                                       |
-| ✔   | ✔    | [![Telescope][Telescope.com]][Telescope-url]                       | Application performance tracking and debugging. May be resource usage heavy |
-| ✔   | ✕    | [![DebugBar][DebugBar.com]][DebugBar-url]                          | In browser debug bar                                                        |
-| ✔   | ✕    | [![Laradumps][Laradumps.com]][Laradumps-url]                       | Debugging without dump and die                                              |
-| ✔   | ✕    | [![Larastan][Larastan.com]][Larastan-url]                          | Static analysis of code                                                     |
-| ✔   | ✕    | [![Pint][Pint.com]][Pint-url]                                      | Opinionated code formatting                                                 |
+| ✔️  | ✔️   | [![Livewire][Livewire.com]][Livewire-url]                          | Laravel based dynamic pages with minimal JS                                 |
+| ✔️  | ✔️   | [![Spatie Permission][SpatiePermission.com]][SpatiePermission-url] | Roles and Permissions                                                       |
+| ✔️  | ✔️️  | [![Telescope][Telescope.com]][Telescope-url]                       | Application performance tracking and debugging. May be resource usage heavy |
+| ✔️  | ❌    | [![DebugBar][DebugBar.com]][DebugBar-url]                          | In browser debug bar                                                        |
+| ✔️  | ❌    | [![Laradumps][Laradumps.com]][Laradumps-url]                       | Debugging without dump and die                                              |
+| ✔️  | ❌    | [![Larastan][Larastan.com]][Larastan-url]                          | Static analysis of code                                                     |
+| ✔️  | ❌    | [![Pint][Pint.com]][Pint-url]                                      | Opinionated code formatting                                                 |
 
 ### Installation of Packages
 
@@ -299,6 +303,8 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 [-Product-Screenshot-3]: public/kit-docs/screenshot-admin.png
 
 [-Product-Screenshot-4]: public/kit-docs/screenshot-about.png
+
+[-Product-Screenshot-5]: public/kit-docs/screenshot-privacy.png
 
 <!-- Product, Package, Framework, et al -->
 
