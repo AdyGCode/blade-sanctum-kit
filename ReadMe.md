@@ -27,7 +27,7 @@ Primarily used for teaching purposes at [North Metropolitan TAFE](https://northm
 [![Educational Community Licence][-Licence-Shield]][-Licence-URL]
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
 ## Description
 
@@ -48,25 +48,28 @@ The project is developed as a re-write of the "Retro Blade Kit" and "Base Blade 
 It provides a base template for the creation of a "SaaS" style application, omitting sections that may tie to a specific
 vendor such as a payment system.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
 ## Table of Contents
 
+- [Badges](#built-with)
 - [Description](#description)
 - [Installation](#installation)
-- [Credits](#credits)
-- [Licence](#licence)
-- [Badges](#badges)
+- [Extending the Kit](#extending-Kit)
+- [Screenshots](#screenshots)
 - [Tests](#tests)
+- [Credits](#credits)
 - [Contact](#contact)
+- [Licence](#licence)
 
 ## Installation
 
 ### Via Laravel Herd
 
-One-click install a new application using this starter kit through [Laravel Herd](https://herd.laravel.com):
+One-click install a new application using this starter kit through
+[Laravel Herd](https://herd.laravel.com):
 
-![Install_with_Laravel_Herd][LaravelHerdCreate.com]][LaravelHerdCreate-url]
+[![Install_with_Laravel_Herd][LaravelHerdCreate.com]][LaravelHerdCreate-url]
 
 ### Via the Laravel Installer
 
@@ -77,62 +80,113 @@ official [Laravel Installer](https://laravel.com/docs/12.x/installation#installi
   laravel new my-app --using=adygcode/blade-sanctum-kit
 ```
 
-Replace `my-app` with the name of your project, using kebab-case.
+Replace `my-app` with the name of your project, using **lower case** kebab-case.
 
+<p align="right">(<a href="#top">🔝back to top</a>)</p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Post setup
 
-## Screenshots
+The steps for post installation will depend on if you are a student.
 
-Below are sample pages from the kit.
+#### What is `.env.dev`?
 
-### General Welcome/Home Page
+We provide a `.env.dev` file to use as a starter point for the application when developing.
 
-![Product Screenshot Welcome Page][-Product-ScreenShot-1]
+This is because we have a setup script we execute for testing our student submissions that uses this file, and executes
+steps to install the packages from scratch, set up a database (usually MariaDB or MySQL), set up the MAIL configuration
+to use Mailpit, run migrations and seeders, and more.
 
-### Authenticated User Dashboard
+#### Finishing the Set-up
 
-![Product Screenshot Authenticated User Dashboard][-Product-ScreenShot-2]
+> Remember that `app-name` is the name of the application you used when creating the project. It will be replaced by the
+> project's name, for example `my-big-laravel-app`.
 
-### Admin Dashboard
+Switch into the project folder:
 
-![Product Screenshot Admin Dashboard][-Product-ScreenShot-3]
+```shell
+cd app-name
+```
 
-### About Page
+Execute the following steps to configure your development environment:
 
-![Product Screenshot About Page][-Product-ScreenShot-4]
+```shell
+cp .env.dev .env
+php artisan key:generate
+php artisan migrate:fresh --seed
+```
 
-### Privacy Policy Page
+At this point you should be able to execute the development server.
 
-![Product Screenshot Privacy Policy Page][-Product-ScreenShot-5]
+#### Development Servers
 
-## Credits
+We have expanded the default composer run scripts provided with Laravel.
 
-This template is built using:
+We have included:
 
-- Font Awesome. (n.d.). Fontawesome.com. https://fontawesome.com
-- Laravel - The PHP Framework For Web Artisans. (2011). Laravel.com. https://laravel.com
-- Laravel Bootcamp - Learn the PHP Framework for Web Artisans. (n.d.).
-  Bootcamp.laravel.com. https://bootcamp.laravel.com/
-- PHP: Hypertext Preprocessor. (n.d.). Www.php.net. https://php.net
-- Professional README Guide. (n.d.). Coding-Boot-Camp.github.io. Retrieved April 15, 2024,
-  from https://coding-boot-camp.github.io/full-stack/github/professional-guide
-- TailwindCSS. (2023). Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.
-  Tailwindcss.com. https://tailwindcss.com/
-- Free Open Source Tailwind CSS v4 Components | HyperUI. (2025). HyperUI. https://www.hyperui.dev/
-- Shields.io. (2025). Shields.io. https://shields.io/
-- Simple Icons. (2025). Simpleicons.org. https://simpleicons.org/?q=simple
-- Roave/SecurityAdvisories: Security advisories as a simple composer exclusion list, updated daily. (2025).
-  GitHub. https://github.com/Roave/SecurityAdvisories
+- `dev` for general use, no MailPit
+- `dev-win` for windows users, with MailPit
+- `dev-linux`, for macOS and Linux uses, with MailPit and Log Watching
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+##### Dev
 
-## Tests
+Executes three scripts in parallel using the `concurrently` package.
 
-TBD
+- `php artisan serve`
+- `php artisan queue:listen --tries=1`
+- `npm run dev`
 
+```shell
+composer run dev
+```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+##### Dev-Win
+
+This is for Windows users who are not using WSL or Docker.
+
+Executes four scripts in parallel using the `concurrently` package.
+
+- `php artisan serve`
+- `php artisan queue:listen --tries=1`
+- `npm run dev`
+- `mailpit --smtp=0.0.0.0:2525`
+
+```shell
+composer run dev-win
+```
+
+##### Dev-Linux
+
+This is for Linux and macOS users.
+
+Ensure you have installed MailPit and Pail on your macOS/Linux system.
+
+Executes five scripts in parallel using the `concurrently` package.
+
+- `php artisan serve`
+- `php artisan queue:listen --tries=1`
+- `npm run dev`
+- `mailpit --smtp=0.0.0.0:2525`
+- `php artisan pail --timeout=0`
+
+```shell
+composer run dev-linux
+```
+
+##### PhpStan
+
+PHPStan is a static analysis package for PHP. It has been wrapped for Laravel use.
+
+Installation details are in the Extending Kit section.
+
+The command executes:
+
+- `phpstan analyse --memory-limit=2G`
+
+```shell
+composer run phpstan
+```
+
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
 ## Extending Kit
 
@@ -160,6 +214,68 @@ Adding additional packages will occur, usually as the development process is com
 When updating or adding any package make sure you immediately run your tests to make sure nothing has got broken in the
 upgrade/addition process.
 
+#### Static Analysis for Laravel
+
+Use during development.
+
+```shell
+composer require larastan/larastan --dev
+```
+
+The project has a base `phpstan.neon` configuration file in the project's root folder.
+
+#### Pint Opinionated Code Formatting and Linter
+
+Use during development
+
+```shell
+composer require laravel/pint --dev
+```
+
+#### Laradumps
+
+Use during development only.
+
+```shell
+composer require laradumps/laradumps --dev
+```
+
+#### Debug Bar
+
+Use during development only.
+
+```shell
+composer require barryvdh/laravel-debugbar --dev
+```
+
+#### Telescope
+
+To use during development only:
+
+```shell
+composer require laravel/telescope --dev
+```
+
+If you wish to use this for development and production, remove the `--dev`:
+
+```shell
+composer require laravel/telescope
+```
+
+#### Livewire 4.0 BETA
+
+```shell
+composer require laravel/livewire
+```
+
+#### Spatie Permission
+
+```shell
+composer require spatie/laravel-permission
+```
+
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
+
 ### Updating Packages
 
 If you wish to make sure that the basics are complete, and upgrades are also completed then the following may assist...
@@ -173,7 +289,7 @@ composer update --dry-run
 npm update --dry-run
 ```
 
-#### Composer Pacakge Updates
+#### Composer Package Updates
 
 Afterwards, you may update individually using commands such as those below:
 
@@ -202,63 +318,61 @@ single command:
 npm update
 ```
 
-### Static Analysis for Laravel
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
-Use during development
+## Screenshots
 
-```shell
-composer require larastan/larastan --dev
-```
+Below are sample pages from the kit.
 
-### Pint Opinionated Code Formatting and Linter
+### General Welcome/Home Page
 
-Use during development
+![Product Screenshot Welcome Page][-Product-ScreenShot-1]
 
-```shell
-composer require laravel/pint --dev
-```
+### Authenticated User Dashboard
 
-### Laradumps
+![Product Screenshot Authenticated User Dashboard][-Product-ScreenShot-2]
 
-Use during development only.
+### Admin Dashboard
 
-```shell
-composer require laradumps/laradumps --dev
-```
+![Product Screenshot Admin Dashboard][-Product-ScreenShot-3]
 
-### Debug Bar
+### About Page
 
-Use during development only.
+![Product Screenshot About Page][-Product-ScreenShot-4]
 
-```shell
-composer require barryvdh/laravel-debugbar --dev
-```
+### Privacy Policy Page
 
-### Telescope
+![Product Screenshot Privacy Policy Page][-Product-ScreenShot-5]
 
-To use during development only:
 
-```shell
-composer require laravel/telescope --dev
-```
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
-If you wish to use this for development and production, remove the `--dev`:
+## Tests
 
-```shell
-composer require laravel/telescope
-```
+TBD
 
-### Livewire 4.0 BETA
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
-```shell
-composer require laravel/livewire
-```
+## Credits
 
-### Spatie Permission
+This template is built using:
 
-```shell
-composer require spatie/laravel-permission
-```
+- Font Awesome. (n.d.). Fontawesome.com. https://fontawesome.com
+- Laravel - The PHP Framework For Web Artisans. (2011). Laravel.com. https://laravel.com
+- Laravel Bootcamp - Learn the PHP Framework for Web Artisans. (n.d.).
+  Bootcamp.laravel.com. https://bootcamp.laravel.com/
+- PHP: Hypertext Preprocessor. (n.d.). Www.php.net. https://php.net
+- Professional README Guide. (n.d.). Coding-Boot-Camp.github.io. Retrieved April 15, 2024,
+  from https://coding-boot-camp.github.io/full-stack/github/professional-guide
+- TailwindCSS. (2023). Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.
+  Tailwindcss.com. https://tailwindcss.com/
+- Free Open Source Tailwind CSS v4 Components | HyperUI. (2025). HyperUI. https://www.hyperui.dev/
+- Shields.io. (2025). Shields.io. https://shields.io/
+- Simple Icons. (2025). Simpleicons.org. https://simpleicons.org/?q=simple
+- Roave/SecurityAdvisories: Security advisories as a simple composer exclusion list, updated daily. (2025).
+  GitHub. https://github.com/Roave/SecurityAdvisories
+
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
 ## Contact
 
@@ -268,14 +382,14 @@ Adrian Gould: Lecturer (ASL1), [North Metropolitan TAFE](https://northmetrotafe.
 - GitHub Repos: [https://github.com/AdyGCode](https://github.com/AdyGCode)
 - Starter Kit Repo: [Blade Sanctum Starter Kit](https://github.com/AdyGCode/blade-sanctum-kit)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
 ## Licence
 
 The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed under the MIT license.
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
 
 
@@ -310,11 +424,11 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 
 [DebugBar-url]: https://laraveldebugbar.com
 
-[DebugBar.com]: https://img.shields.io/badge/Laravel_Debugbar-eb4432?logoColor=white
+[DebugBar.com]: https://img.shields.io/badge/Laravel_Debugbar-eb4432?style=for-the-badge&logo=&logoColor=white
 
 [Inertia-url]: https://inertiajs.com
 
-[Inertia.com]: https://img.shields.io/badge/Inertia-9553E9?&logo=inertia&logoColor=white
+[Inertia.com]: https://img.shields.io/badge/Inertia-9553E9?style=for-the-badge&logo=inertia&logoColor=white
 
 [JetBrains-url]: https://jetbrains.com
 
@@ -322,11 +436,11 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 
 [Laradumps-url]: https://laradumps.dev
 
-[Laradumps.com]: https://img.shields.io/badge/Laradumps-fbc120?logoColor=black
+[Laradumps.com]: https://img.shields.io/badge/Laradumps-fbc120?style=for-the-badge&logo=logo&logoColor=black
 
 [Larastan-url]:https://github.com/larastan/larastan
 
-[Larastan.com]: https://img.shields.io/badge/Larastan-3191d0?logoColor=white
+[Larastan.com]: https://img.shields.io/badge/Larastan-3191d0?style=for-the-badge&logo=logo&logoColor=white
 
 [Laravel-url]: https://laravel.com
 
@@ -342,7 +456,7 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 
 [Livewire-url]: https://livewire.laravel.com
 
-[Livewire.com]: https://img.shields.io/badge/Livewire-4E56A6?logo=livewire&logoColor=white
+[Livewire.com]: https://img.shields.io/badge/Livewire-4E56A6?style=for-the-badge&logo=livewire&logoColor=white
 
 [Php-url]: https://inertiajs.com
 
@@ -354,7 +468,7 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 
 [Pint-url]: https://laravel.com/docs/pint
 
-[Pint.com]: https://img.shields.io/badge/Pint-f49931?logo=laravel&logoColor=black
+[Pint.com]: https://img.shields.io/badge/Pint-f49931?style=for-the-badge&logo=laravel&logoColor=black
 
 [Sanctum-url]: https://laravel.com
 
@@ -362,11 +476,11 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 
 [SimpleIcons-url]: https://simpleicons.org
 
-[SimpleIcons.com]: https://img.shields.io/badge/SimpleIcons-111111?logo=simpleicons&logoColor=white
+[SimpleIcons.com]: https://img.shields.io/badge/SimpleIcons-111111?style=for-the-badge&logo=simpleicons&logoColor=white
 
 [SpatiePermission-url]: https://spatie.be/docs/laravel-permission/v6/introduction
 
-[SpatiePermission.com]: https://img.shields.io/badge/Spatie_Permission-197593?logoColor=white
+[SpatiePermission.com]: https://img.shields.io/badge/Spatie_Permission-197593?style=for-the-badge&logo=logo&logoColor=white
 
 [Tailwindcss-url]: https://tailwindcss.com
 
@@ -374,4 +488,4 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 
 [Telescope-url]: https://telescope.laravel.com
 
-[Telescope.com]: https://img.shields.io/badge/Telescope-7760cb?logo=laravel&logoColor=white
+[Telescope.com]: https://img.shields.io/badge/Telescope-7760cb?style=for-the-badge&logo=laravel&logoColor=white
