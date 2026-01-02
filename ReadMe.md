@@ -292,13 +292,13 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 
 [-Licence-URL]: https://github.com/adygcode/base-blade-kit/blob/main/License.md
 
-[-Product-Screenshot-1]: storage/app/public/kit-docs/screenshot-welcome.png
+[-Product-Screenshot-1]: public/kit-docs/screenshot-welcome.png
 
-[-Product-Screenshot-2]: storage/app/public/kit-docs/screenshot-authenticated.png
+[-Product-Screenshot-2]: public/kit-docs/screenshot-authenticated.png
 
-[-Product-Screenshot-3]: storage/app/public/kit-docs/screenshot-admin.png
+[-Product-Screenshot-3]: public/kit-docs/screenshot-admin.png
 
-[-Product-Screenshot-4]: storage/app/public/kit-docs/screenshot-about.png
+[-Product-Screenshot-4]: public/kit-docs/screenshot-about.png
 
 <!-- Product, Package, Framework, et al -->
 
