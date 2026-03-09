@@ -12,8 +12,10 @@ Primarily used for teaching purposes at [North Metropolitan TAFE](https://northm
 
 [![PHP][Php.com]][Php-url]
 [![Laravel][Laravel.com]][Laravel-url]
-[![Tailwindcss][Tailwindcss.com]][Tailwindcss-url]
+[![Livewire][Livewire.com]][Livewire-url]
+[![Inertia][Inertia.com]][Inertia-url]
 [![Sanctum][Sanctum.com]][Sanctum-url]
+[![Tailwindcss][Tailwindcss.com]][Tailwindcss-url]
 
 ### Editor of choice
 
@@ -64,6 +66,15 @@ vendor such as a payment system.
 
 ## Installation
 
+Remember to run `composer install`, `php artisan migrate`, `php artisan 
+key:generate` to make sure a key is generated, all tables are created, 
+and packages correctly installed.
+
+Alternatively, you may use `composer setup` to install all packages, 
+set a key, migrate and other common Laravel setup steps (using `pnpm`
+for Node.js package management). Using `composer setup-npm` will perform
+the same process but using `npm` for package management.
+
 ### Via Laravel Herd
 
 One-click install a new application using this starter kit through
@@ -79,9 +90,22 @@ official [Laravel Installer](https://laravel.com/docs/12.x/installation#installi
 ```bash
   laravel new my-app --using=adygcode/blade-sanctum-kit
 ```
+to use PNPM in place of NPM use:
 
-Replace `my-app` with the name of your project, using **lower case** kebab-case.
+```bash
+  laravel new my-app -pnpm --using=adygcode/blade-sanctum-kit
+```
 
+To install with Pest, PNPM, Livewire, initialise a git repo, SQLite, ...
+(Typed in on a single command line):
+
+```bash
+  laravel new my-app --pnpm --git --database=sqlite \
+    --pest --using=adygcode/blade-sanctum-kit 
+```
+
+In either case, you must replace `my-app` with the name of your project, 
+using kebab-case. For example `duck-quack-paddle`.
 <p align="right">(<a href="#top">🔝back to top</a>)</p>
 
 ### Post setup
@@ -398,17 +422,17 @@ The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed u
 <!-- General Items, Screenshots, et al -->
 <!-- Screenshots stored in storage/app/public/kit-docs -->
 
-[-Forks-Shield]: http://img.shields.io/github/forks/adygcode/base-blade-kit.svg?style=for-the-badge
+[-Forks-Shield]: http://img.shields.io/github/forks/adygcode/blade-sanctum-kit.svg?style=for-the-badge
 
-[-Forks-URL]: https://github.com/AdyGCode/base-blade-kit/network/members
+[-Forks-URL]: https://github.com/AdyGCode/blade-sanctum-kit/network/members
 
-[-Issues-Shield]: http://img.shields.io/github/issues/adygcode/base-blade-kit.svg?style=for-the-badge
+[-Issues-Shield]: http://img.shields.io/github/issues/adygcode/blade-sanctum-kit.svg?style=for-the-badge
 
-[-Issues-URL]: https://github.com/adygcode/base-blade-kit/issues
+[-Issues-URL]: https://github.com/adygcode/blade-sanctum-kit/issues
 
-[-Licence-Shield]: https://img.shields.io/github/license/adygcode/base-blade-kit.svg?style=for-the-badge
+[-Licence-Shield]: https://img.shields.io/github/license/adygcode/blade-sanctum-kit.svg?style=for-the-badge
 
-[-Licence-URL]: https://github.com/adygcode/base-blade-kit/blob/main/License.md
+[-Licence-URL]: https://github.com/adygcode/blade-sanctum-kit/blob/main/License.md
 
 [-Product-Screenshot-1]: public/kit-docs/screenshot-welcome.png
 
