@@ -1,7 +1,7 @@
 <x-admin-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-white leading-tight">
-            {{ __('Admin Zone') }}
+            {{ __('Administration') }} {{ __("Dashboard") }}
         </h2>
     </x-slot>
 
@@ -311,6 +311,30 @@
                           icon="fa-solid fa-hand-lizard"
                           icon-color="text-white"/>
 
+            <x-stats-card title="{{ __('Tailwind Colour') }}"
+                          value="Taupe"
+                          bg="bg-taupe-700"
+                          icon="fa-solid fa-earth-africa"
+                          icon-color="text-white"/>
+
+            <x-stats-card title="{{ __('Tailwind Colour') }}"
+                          value="Mauve"
+                          bg="bg-mauve-700"
+                          icon="fa-solid fa-fish"
+                          icon-color="text-white"/>
+
+            <x-stats-card title="{{ __('Tailwind Colour') }}"
+                          value="Mist"
+                          bg="bg-mist-700"
+                          icon="fa-solid fa-spray-can-sparkles"
+                          icon-color="text-white"/>
+
+            <x-stats-card title="{{ __('Tailwind Colour') }}"
+                          value="Olive"
+                          bg="bg-olive-700"
+                          icon="fa-solid fa-bottle-droplet"
+                          icon-color="text-white"/>
+
 
         </div>
     </section>
@@ -377,7 +401,7 @@
 
             <x-stats-card icon="fa-solid fa-swatchbook"
                           title="Custom Colour"
-                          value="Discord Blue"
+                          value="Discord Blurple"
                           value-class="text-xl"
                           bg="bg-telegram-500"
                           icon-color="text-white"/>

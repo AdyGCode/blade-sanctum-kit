@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 @import "@fortawesome/fontawesome-free/css/all.css";
-@import '@midudev/tailwind-animations';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -111,17 +110,17 @@
 }
 
 @theme {
-    --color-discord-50: oklch(0.958 0.019 282.83);
-    --color-discord-100: oklch(0.915 0.039 284.05);
-    --color-discord-200: oklch(0.831 0.078 282.16);
-    --color-discord-300: oklch(0.748 0.121 280.45);
-    --color-discord-400: oklch(0.657 0.167 277.72);
-    --color-discord-500: oklch(0.577 0.209 273.85);
-    --color-discord-600: oklch(0.495 0.251 267.74);
-    --color-discord-700: oklch(0.415 0.216 266.98);
-    --color-discord-800: oklch(0.324 0.169 266.95);
-    --color-discord-900: oklch(0.234 0.122 267.28);
-    --color-discord-950: oklch(0.184 0.096 266.86);
+  --color-discord-50: oklch(0.958 0.019 282.83);
+  --color-discord-100: oklch(0.915 0.039 284.05);
+  --color-discord-200: oklch(0.831 0.078 282.16);
+  --color-discord-300: oklch(0.748 0.121 280.45);
+  --color-discord-400: oklch(0.657 0.167 277.72);
+  --color-discord-500: oklch(0.577 0.209 273.85);
+  --color-discord-600: oklch(0.495 0.251 267.74);
+  --color-discord-700: oklch(0.415 0.216 266.98);
+  --color-discord-800: oklch(0.324 0.169 266.95);
+  --color-discord-900: oklch(0.234 0.122 267.28);
+  --color-discord-950: oklch(0.184 0.096 266.86);
 }
 
 @theme {
