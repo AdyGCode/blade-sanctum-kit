@@ -93,7 +93,7 @@ official [Laravel Installer](https://laravel.com/docs/12.x/installation#installi
 to use PNPM in place of NPM use:
 
 ```bash
-  laravel new my-app -pnpm --using=adygcode/blade-sanctum-kit
+  laravel new my-app --pnpm --using=adygcode/blade-sanctum-kit
 ```
 
 To install with Pest, PNPM, Livewire, initialise a git repo, SQLite, ...
