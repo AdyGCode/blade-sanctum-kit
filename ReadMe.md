@@ -4,9 +4,11 @@
 
 A Laravel Blade Template with Sanctum Authentication built in.
 
-*Based on the Blade & Breeze Starter Kit provided with Laravel versions before Laravel 12.*
+*Based on the Blade & Breeze Starter Kit provided with Laravel versions before
+Laravel 12.*
 
-Primarily used for teaching purposes at [North Metropolitan TAFE](https://northmetrotafe.wa.edu.au).
+Primarily used for teaching purposes
+at [North Metropolitan TAFE](https://northmetrotafe.wa.edu.au).
 
 ### Built With
 
@@ -33,7 +35,8 @@ Primarily used for teaching purposes at [North Metropolitan TAFE](https://northm
 
 ## Description
 
-A starter kit for Laravel based on Laravel's Blade templating engine, TailwindCSS v4, HyperUI components and FontAwesome
+A starter kit for Laravel based on Laravel's Blade templating engine,
+TailwindCSS v4, HyperUI components and FontAwesome
 Free icons.
 
 It contains three sections:
@@ -45,9 +48,11 @@ It contains three sections:
 - **Admin**:
     - Administration Layout, Controller and Pages
 
-The project is developed as a re-write of the "Retro Blade Kit" and "Base Blade Kit" also by Adrian Gould.
+The project is developed as a re-write of the "Retro Blade Kit" and "Base
+Blade Kit" also by Adrian Gould.
 
-It provides a base template for the creation of a "SaaS" style application, omitting sections that may tie to a specific
+It provides a base template for the creation of a "SaaS" style application,
+omitting sections that may tie to a specific
 vendor such as a payment system.
 
 <p align="right">(<a href="#top">🔝 Back to top</a>)</p>
@@ -66,8 +71,9 @@ vendor such as a payment system.
 
 ## Installation
 
-Remember to run `composer install`, `php artisan migrate`, `php artisan 
-key:generate` to make sure a key is generated, all tables are created,
+Remember to run `composer install`, `composer update`, `php artisan migrate`,
+`php artisan key:generate` to make sure a key is generated, all tables are
+created,
 and packages correctly installed.
 
 Alternatively, you may use `composer setup` to install all packages,
@@ -94,7 +100,7 @@ official [Laravel Installer](https://laravel.com/docs/12.x/installation#installi
 to use PNPM in place of NPM use:
 
 ```bash
-  laravel new my-app -pnpm --using=adygcode/blade-sanctum-kit
+  laravel new my-app --pnpm --using=adygcode/blade-sanctum-kit
 ```
 
 To install with Pest, PNPM, Livewire, initialise a git repo, SQLite, ...
@@ -113,17 +119,21 @@ using kebab-case. For example `duck-quack-paddle`.
 
 The steps for post installation will depend on if you are a student.
 
-#### What is `.env.dev`?
+#### What is `.env.example`?
 
-We provide a `.env.dev` file to use as a starter point for the application when developing.
+The `.env.example` is a base configuration for the installed application.
 
-This is because we have a setup script we execute for testing our student submissions that uses this file, and executes
-steps to install the packages from scratch, set up a database (usually MariaDB or MySQL), set up the MAIL configuration
-to use Mailpit, run migrations and seeders, and more.
+The mail configuration in the `.env.example` for MailPit is set to port
+`2525`. Change to `1025` for the default MailPit port in the
+`.env.example` and your generated `.env` file.
+
+When deploying to anything beyond a development environment ensure that
+any secrets are removed from the `.env.example`.
 
 #### Finishing the Set-up
 
-> Remember that `app-name` is the name of the application you used when creating the project. It will be replaced by the
+> Remember that `app-name` is the name of the application you used when
+> creating the project. It will be replaced by the
 > project's name, for example `my-big-laravel-app`.
 
 Switch into the project folder:
@@ -132,15 +142,18 @@ Switch into the project folder:
 cd app-name
 ```
 
-Execute a composer and npm update to ensure latest versions of packages, bug fixes or security fixes applied:
+Execute a composer and npm update to ensure latest versions of packages, bug
+fixes or security fixes applied:
 
 For NPM:
+
 ```shell [COMPOSER and NPM]
 composer update
 npm update
 ```
 
 For PNPM:
+
 ```shell [COMPOSER and PNPM]
 composer update
 pnpm update
@@ -153,8 +166,6 @@ cp .env.dev .env
 php artisan key:generate
 php artisan migrate:fresh --seed
 ```
-
-
 
 At this point you should be able to execute the development server.
 
@@ -215,7 +226,8 @@ composer run dev-linux
 
 ##### PhpStan
 
-PHPStan is a static analysis package for PHP. It has been wrapped for Laravel use.
+PHPStan is a static analysis package for PHP. It has been wrapped for Laravel
+use.
 
 Installation details are in the Extending Kit section.
 
@@ -231,28 +243,33 @@ composer run phpstan
 
 ## Extending Kit
 
-If you wish to add packages for further functionality, then follow the usual documentation from each of their sites.
+If you wish to add packages for further functionality, then follow the usual
+documentation from each of their sites.
 
-| Dev | Prod    | Item                                                               | Purpose                                                                     |
-|-----|---------|--------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| ✔️  | ✔️      | [![Livewire][Livewire.com]][Livewire-url]                          | Laravel based dynamic pages with minimal JS                                 |
-| ✔️  | ✔️      | [![Spatie Permission][SpatiePermission.com]][SpatiePermission-url] | Roles and Permissions                                                       |
-| ✔️  | ✔️️     | [![Telescope][Telescope.com]][Telescope-url]                       | Application performance tracking and debugging. May be resource usage heavy |
-| ✔️  | ❌       | [![DebugBar][DebugBar.com]][DebugBar-url]                          | In browser debug bar                                                        |
-| ✔️  | ❌       | [![Laradumps][Laradumps.com]][Laradumps-url]                       | Debugging without dump and die                                              |
-| ✔️  | ❌       | [![Larastan][Larastan.com]][Larastan-url]                          | Static analysis of code                                                     |
-| ✔️  | ❌       | [![Pint][Pint.com]][Pint-url]                                      | Opinionated code formatting                                                 |
+| Dev | Prod | Item                                                               | Purpose                                                                     |
+|-----|------|--------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| ✔️  | ✔️   | [![Livewire][Livewire.com]][Livewire-url]                          | Laravel based dynamic pages with minimal JS                                 |
+| ✔️  | ✔️   | [![Spatie Permission][SpatiePermission.com]][SpatiePermission-url] | Roles and Permissions                                                       |
+| ✔️  | ✔️️  | [![Telescope][Telescope.com]][Telescope-url]                       | Application performance tracking and debugging. May be resource usage heavy |
+| ✔️  | ❌    | [![DebugBar][DebugBar.com]][DebugBar-url]                          | In browser debug bar                                                        |
+| ✔️  | ❌    | [![Laradumps][Laradumps.com]][Laradumps-url]                       | Debugging without dump and die                                              |
+| ✔️  | ❌    | [![Larastan][Larastan.com]][Larastan-url]                          | Static analysis of code                                                     |
+| ✔️  | ❌    | [![Pint][Pint.com]][Pint-url]                                      | Opinionated code formatting                                                 |
 
 ### Installation of Packages
 
-After completing an installation with the starter kit, you may want to update or add extra packages.
+After completing an installation with the starter kit, you may want to update
+or add extra packages.
 
-Updating is always a good idea before getting into the development process. And it should also be completed whilst
+Updating is always a good idea before getting into the development process.
+And it should also be completed whilst
 development is progressing, but never on the main branch.
 
-Adding additional packages will occur, usually as the development process is completed, again never on the main branch.
+Adding additional packages will occur, usually as the development process is
+completed, again never on the main branch.
 
-When updating or adding any package make sure you immediately run your tests to make sure nothing has got broken in the
+When updating or adding any package make sure you immediately run your tests
+to make sure nothing has got broken in the
 upgrade/addition process.
 
 #### Static Analysis for Laravel
@@ -263,7 +280,8 @@ Use during development.
 composer require larastan/larastan --dev
 ```
 
-The project has a base `phpstan.neon` configuration file in the project's root folder.
+The project has a base `phpstan.neon` configuration file in the project's root
+folder.
 
 #### Pint Opinionated Code Formatting and Linter
 
@@ -319,7 +337,8 @@ composer require spatie/laravel-permission
 
 ### Updating Packages
 
-If you wish to make sure that the basics are complete, and upgrades are also completed then the following may assist...
+If you wish to make sure that the basics are complete, and upgrades are also
+completed then the following may assist...
 
 #### Dry Run Updates
 
@@ -331,7 +350,6 @@ npm update --dry-run
 ```
 
 Replace `npm` with `pnpm` when using pnpm.
-
 
 #### Composer Package Updates
 
@@ -355,18 +373,19 @@ composer update
 
 ### Node.js Package Updates
 
-We have shown how to check for updates to the Node.js packages, and likewise you may update all the packages using a
+We have shown how to check for updates to the Node.js packages, and likewise
+you may update all the packages using a
 single command:
 
 ```shell [BASH NPM]
 npm update
 ```
+
 or
 
 ```shell [BASH PNPM]
 pnpm update
 ```
-
 
 <p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
@@ -408,35 +427,44 @@ TBD
 This template is built using:
 
 - Font Awesome. (n.d.). Fontawesome.com. https://fontawesome.com
-- Laravel - The PHP Framework For Web Artisans. (2011). Laravel.com. https://laravel.com
+- Laravel - The PHP Framework For Web Artisans. (2011).
+  Laravel.com. https://laravel.com
 - Laravel Bootcamp - Learn the PHP Framework for Web Artisans. (n.d.).
   Bootcamp.laravel.com. https://bootcamp.laravel.com/
 - PHP: Hypertext Preprocessor. (n.d.). Www.php.net. https://php.net
-- Professional README Guide. (n.d.). Coding-Boot-Camp.github.io. Retrieved April 15, 2024,
+- Professional README Guide. (n.d.). Coding-Boot-Camp.github.io. Retrieved
+  April 15, 2024,
   from https://coding-boot-camp.github.io/full-stack/github/professional-guide
-- TailwindCSS. (2023). Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.
+- TailwindCSS. (2023). Tailwind CSS - Rapidly build modern websites without
+  ever leaving your HTML.
   Tailwindcss.com. https://tailwindcss.com/
-- Free Open Source Tailwind CSS v4 Components | HyperUI. (2025). HyperUI. https://www.hyperui.dev/
+- Free Open Source Tailwind CSS v4 Components | HyperUI. (2025).
+  HyperUI. https://www.hyperui.dev/
 - Shields.io. (2025). Shields.io. https://shields.io/
 - Simple Icons. (2025). Simpleicons.org. https://simpleicons.org/?q=simple
-- Roave/SecurityAdvisories: Security advisories as a simple composer exclusion list, updated daily. (2025).
+- Roave/SecurityAdvisories: Security advisories as a simple composer exclusion
+  list, updated daily. (2025).
   GitHub. https://github.com/Roave/SecurityAdvisories
 
 <p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
 ## Contact
 
-Adrian Gould: Lecturer (ASL1), [North Metropolitan TAFE](https://northmetrotafe.wa.edu.au), Perth WA, Australia.
+Adrian Gould: Lecturer (
+ASL1), [North Metropolitan TAFE](https://northmetrotafe.wa.edu.au), Perth WA,
+Australia.
 
 - GitHub Pages: [https://adygcode.github.io](https://adygcode.github.io)
 - GitHub Repos: [https://github.com/AdyGCode](https://github.com/AdyGCode)
-- Starter Kit Repo: [Blade Sanctum Starter Kit](https://github.com/AdyGCode/blade-sanctum-kit)
+- Starter Kit
+  Repo: [Blade Sanctum Starter Kit](https://github.com/AdyGCode/blade-sanctum-kit)
 
 <p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
 ## Licence
 
-The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed under the MIT license.
+The Laravel "Blade with Sanctum" Starter Kit is open-sourced software licensed
+under the MIT license.
 
 
 <p align="right">(<a href="#top">🔝 Back to top</a>)</p>
