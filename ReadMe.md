@@ -67,10 +67,10 @@ vendor such as a payment system.
 ## Installation
 
 Remember to run `composer install`, `php artisan migrate`, `php artisan 
-key:generate` to make sure a key is generated, all tables are created, 
+key:generate` to make sure a key is generated, all tables are created,
 and packages correctly installed.
 
-Alternatively, you may use `composer setup` to install all packages, 
+Alternatively, you may use `composer setup` to install all packages,
 set a key, migrate and other common Laravel setup steps (using `pnpm`
 for Node.js package management). Using `composer setup-npm` will perform
 the same process but using `npm` for package management.
@@ -90,6 +90,7 @@ official [Laravel Installer](https://laravel.com/docs/12.x/installation#installi
 ```bash
   laravel new my-app --using=adygcode/blade-sanctum-kit
 ```
+
 to use PNPM in place of NPM use:
 
 ```bash
@@ -104,7 +105,7 @@ To install with Pest, PNPM, Livewire, initialise a git repo, SQLite, ...
     --pest --using=adygcode/blade-sanctum-kit 
 ```
 
-In either case, you must replace `my-app` with the name of your project, 
+In either case, you must replace `my-app` with the name of your project,
 using kebab-case. For example `duck-quack-paddle`.
 <p align="right">(<a href="#top">🔝back to top</a>)</p>
 
@@ -136,6 +137,8 @@ Execute the following steps to configure your development environment:
 ```shell
 cp .env.dev .env
 php artisan key:generate
+php artisan fortify:install
+php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
 php artisan migrate:fresh --seed
 ```
 
@@ -148,7 +151,7 @@ We have expanded the default composer run scripts provided with Laravel.
 We have included:
 
 - `dev` for general use, no MailPit
-- `dev-win` for windows users, with MailPit
+- `dev-win` for Windows users, with MailPit
 - `dev-linux`, for macOS and Linux uses, with MailPit and Log Watching
 
 ##### Dev
@@ -216,15 +219,15 @@ composer run phpstan
 
 If you wish to add packages for further functionality, then follow the usual documentation from each of their sites.
 
-| Dev | Prod | Item                                                               | Purpose                                                                     |
-|-----|------|--------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| ✔️  | ✔️   | [![Livewire][Livewire.com]][Livewire-url]                          | Laravel based dynamic pages with minimal JS                                 |
-| ✔️  | ✔️   | [![Spatie Permission][SpatiePermission.com]][SpatiePermission-url] | Roles and Permissions                                                       |
-| ✔️  | ✔️️  | [![Telescope][Telescope.com]][Telescope-url]                       | Application performance tracking and debugging. May be resource usage heavy |
-| ✔️  | ❌    | [![DebugBar][DebugBar.com]][DebugBar-url]                          | In browser debug bar                                                        |
-| ✔️  | ❌    | [![Laradumps][Laradumps.com]][Laradumps-url]                       | Debugging without dump and die                                              |
-| ✔️  | ❌    | [![Larastan][Larastan.com]][Larastan-url]                          | Static analysis of code                                                     |
-| ✔️  | ❌    | [![Pint][Pint.com]][Pint-url]                                      | Opinionated code formatting                                                 |
+| Dev | Prod    | Item                                                               | Purpose                                                                     |
+|-----|---------|--------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| ✔️  | ✔️      | [![Livewire][Livewire.com]][Livewire-url]                          | Laravel based dynamic pages with minimal JS                                 |
+| ✔️  | ✔️      | [![Spatie Permission][SpatiePermission.com]][SpatiePermission-url] | Roles and Permissions                                                       |
+| ✔️  | ✔️️     | [![Telescope][Telescope.com]][Telescope-url]                       | Application performance tracking and debugging. May be resource usage heavy |
+| ✔️  | ❌       | [![DebugBar][DebugBar.com]][DebugBar-url]                          | In browser debug bar                                                        |
+| ✔️  | ❌       | [![Laradumps][Laradumps.com]][Laradumps-url]                       | Debugging without dump and die                                              |
+| ✔️  | ❌       | [![Larastan][Larastan.com]][Larastan-url]                          | Static analysis of code                                                     |
+| ✔️  | ❌       | [![Pint][Pint.com]][Pint-url]                                      | Opinionated code formatting                                                 |
 
 ### Installation of Packages
 
@@ -313,9 +316,12 @@ composer update --dry-run
 npm update --dry-run
 ```
 
+Replace `npm` with `pnpm` when using pnpm.
+
+
 #### Composer Package Updates
 
-Afterwards, you may update individually using commands such as those below:
+You may update individually using commands such as those below:
 
 ```shell
 composer update laravel/laravel
@@ -338,9 +344,15 @@ composer update
 We have shown how to check for updates to the Node.js packages, and likewise you may update all the packages using a
 single command:
 
-```shell
+```shell [BASH NPM]
 npm update
 ```
+or
+
+```shell [BASH PNPM]
+pnpm update
+```
+
 
 <p align="right">(<a href="#top">🔝 Back to top</a>)</p>
 
