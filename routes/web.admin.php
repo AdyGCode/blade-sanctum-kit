@@ -4,7 +4,6 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserManagementController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::middleware(['auth', 'verified'])
     ->prefix('admin')
     ->name('admin.')
@@ -14,5 +13,3 @@ Route::middleware(['auth', 'verified'])
 
         Route::resource('users', UserManagementController::class);
     });
-
-

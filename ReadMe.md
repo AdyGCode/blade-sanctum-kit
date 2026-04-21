@@ -132,15 +132,29 @@ Switch into the project folder:
 cd app-name
 ```
 
+Execute a composer and npm update to ensure latest versions of packages, bug fixes or security fixes applied:
+
+For NPM:
+```shell [COMPOSER and NPM]
+composer update
+npm update
+```
+
+For PNPM:
+```shell [COMPOSER and PNPM]
+composer update
+pnpm update
+```
+
 Execute the following steps to configure your development environment:
 
 ```shell
 cp .env.dev .env
 php artisan key:generate
-php artisan fortify:install
-php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
 php artisan migrate:fresh --seed
 ```
+
+
 
 At this point you should be able to execute the development server.
 
