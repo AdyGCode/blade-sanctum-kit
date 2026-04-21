@@ -44,7 +44,7 @@ expect()->extend('resultToBeOne', function () {
 |
 */
 
-function something()
+function something():void
 {
-    // ..
+    //  does nothing...
 }

@@ -1,5 +1,4 @@
 {
-    "$schema": "https://getcomposer.org/schema.json",
     "name": "adygcode/blade-sanctum-kit",
     "type": "project",
     "description": "A Laravel Blade Template with Sanctum Authentication built in",
@@ -26,7 +25,6 @@
         "laradumps/laradumps": "^5.3",
         "laradumps/laradumps-core": "^4.0",
         "larastan/larastan": "^3.9",
-        "laravel/breeze": "^2.4",
         "laravel/pail": "^1.2",
         "laravel/pint": "^1.29",
         "laravel/sail": "^1.57",
